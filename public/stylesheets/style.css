@@ -370,7 +370,22 @@ div > iframe {
   margin-top: 25px;
   width: 228px;
 }
+#connect-buttons {
+  /* display: inline-block; */
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
+.connect {
+  margin-top: 25px;
+  width: 180px;
+  /* margin-right: 10px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block; */
+}
 /* ---------------------------------
 
               contact
