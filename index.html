@@ -1,46 +1,244 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" prefix="og: http://opg.me/ns#">
   <head>
     <title>Drew Holbrook</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- <script src="app.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/stylesheets/style.css" />
+    <meta name="title" property="og:title" content="Drew Holbrook" />
+    <meta
+      name="description"
+      property="og:description"
+      content="I'm a software engineer in Crested Butte, CO & co-creator of Ekko"
+    />
+    <meta name="type" property="og:type" content="website" />
+    <meta
+      name="url"
+      property="og:url"
+      content="https://dpholbrook.github.io/"
+    />
+    <meta
+      name="image"
+      property="og:image"
+      content="public/favicons/favicon-16x16.png"
+    />
+    <meta name="author" content="Drew Holbrook" />
+    <!-- ICONS -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/favicons/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="public/favicons/site.webmanifest"> -->
+    <link
+      rel="mask-icon"
+      href="public/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="public/favicons/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="public/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      var clicky_site_ids = clicky_site_ids || [];
+      clicky_site_ids.push(101231323);
+    </script>
+    <script async src="//static.getclicky.com/js"></script>
   </head>
-
   <body>
-    <header>
-      <div class="container">
-        <img src="head_shot.jpg" />
-        <h1>Hi! <span>I'm Drew.</span></h1>
-        <h2>I'm a <span>software engineer</span> living in Colorado.</h2>
-      </div>
-    </header>
+    <div class="logo-links">
+      <a href="https://github.com/dpholbrook" target="_blank">
+        <img
+          class="icon"
+          src="public/assets/icons/git_hub.svg"
+          alt="github logo"
+          id="github-logo"
+        />
+      </a>
+      <a href="public/assets/dpholbrook_resume.pdf" target="_blank">
+        <img
+          class="icon"
+          src="public/assets/icons/resume.svg"
+          alt="link to Drew Holbrook's resume"
+          id="resume-logo"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/drew-holbrook-54070517/"
+        target="_blank"
+      >
+        <img
+          class="icon"
+          src="public/assets/icons/linked_in.svg"
+          alt="link to Drew Holbrook LinkedIn"
+          id="linkedin-logo"
+        />
+      </a>
+      <a href="https://drewparkerholbrook.medium.com/" target="_blank">
+        <img
+          class="icon"
+          src="public/assets/icons/medium.svg"
+          alt="link to Drew Holbrook Medium"
+          id="medium-logo"
+        />
+      </a>
+    </div>
     <main>
-      <div class="container">
-        <p>
-          I'm the the co-creator of Ekko, a realtime message processing
-          framework. I have experience with the Ruby and Javascript ecosystems,
-          as well as AWS.
+      <section id="intro" class="flexbox horz-center">
+        <img
+          id="avatar"
+          class="profile"
+          src="public/assets/images/head_shot.jpg"
+          alt="photo of Drew Holbrook"
+        />
+        <h1 class="profile-name">Hi! I'm Drew.</h1>
+        <p class="intro-p-1">I'm a software engineer living in Colorado.</p>
+        <p class="intro-p-2">
+          I'm a co-creator of
+          <a class="ekko" href="https://ekko-realtime.com/">Ekko</a>, a self
+          deployable realtime infrastructure with in-transit message processing.
         </p>
-      </div>
-    </main>
-    <footer>
-      <div class="container">
-        <h2>Let's Connect</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/dpholbrook">GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/drew-holbrook-54070517/"
-              >LinkedIn</a
+      </section>
+
+      <section id="ekko" class="flexbox horz-center">
+        <div id="ekko-title-container" class="flexbox">
+          <a href="https://ekko-realtime.com/"
+            ><img
+              id="ekko-logo"
+              src="public/assets/images/ekko-horizontal-dark.png"
+              alt="ekko logo"
+          /></a>
+        </div>
+        <div id="ekko-info-container" class="flexbox">
+          <div>
+            <a href="https://ekko-realtime.com/">
+              <img
+                id="setup-command-gif"
+                src="public/assets/gifs/ekko_infrastructure.gif"
+                alt="A gif showing realtime messages being process by Ekko."
+              />
+            </a>
+          </div>
+          <div class="flexbox horz-center">
+            <p>
+              <a class="ekko" href="https://ekko-realtime.com/#home">Ekko</a>
+              is an open-source framework that allows developers to easily
+              deploy realtime infrastructure for their applications. Custom
+              serverless functions provide a flexible, modular way to process
+              messages as they pass through the realtime system.
+            </p>
+            <a
+              id="ekko-repo-btn"
+              class="btn"
+              target="_blank"
+              href="https://ekko-realtime.com/#case-study"
+              >View Case Study</a
             >
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="flexbox horz-center">
+        <h2>Other projects</h2>
+        <ul class="flexbox vert-center">
+          <li>
+            <img
+              src="public/assets/images/requestbin.png"
+              alt="Screenshot of DS-Plus"
+            />
+            <h4>RequestBin</h4>
+            <p>
+              A clone of popular tools to capture and store lists of incoming
+              HTTP requests. Built with Node.js, Express, and postgreSQL.
+            </p>
           </li>
           <li>
-            <a href="drew_holbrook_resume.pdf">Resume</a>
+            <img
+              src="public/assets/images/shopping_cart.png"
+              alt="Screenshot of Regexer application"
+            />
+            <h4>Shopping Cart</h4>
+            <p>
+              A shopping cart app built with a React/Redux font-end, and a
+              Node.js, Express, MongoDB REST API backend.
+            </p>
+          </li>
+          <li>
+            <img
+              src="public/assets/images/reaction.png"
+              alt="Screenshot of Mello application"
+            />
+            <h4>Reaction</h4>
+            <p>
+              A Trello-like app built with a React/Redux font-end, and a
+              Node.js, Express, MongoDB REST API backend.
+            </p>
           </li>
         </ul>
-      </div>
-    </footer>
+      </section>
+      <section id="contact" class="flexbox horz-center">
+        <h3>Contact</h3>
+        <h4>
+          <a href="mailto:drewholbrook@gmail.com">drewholbrook@gmail.com</a>
+        </h4>
+        <ul class="flexbox vert-center">
+          <li>
+            <a href="public/assets/dpholbrook_resume.pdf" target="_blank">
+              <img
+                class="icon"
+                src="public/assets/icons/resume.svg"
+                alt="link to Drew Holbrook's resume"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/dpholbrook" target="_blank">
+              <img
+                class="icon"
+                src="public/assets/icons/git_hub.svg"
+                alt="link to Drew Holbrook GitHub"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/dpholbrook" target="_blank">
+              <img
+                class="icon"
+                src="public/assets/icons/linked_in.svg"
+                alt="link to Drew Holbrook LinkedIn"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://drewparkerholbrook.medium.com/" target="_blank">
+              <img
+                class="icon"
+                src="public/assets/icons/medium.svg"
+                alt="link to Drew Holbrook Medium"
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
