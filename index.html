@@ -54,8 +54,13 @@
       content="public/favicons/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
     <script>
@@ -114,8 +119,8 @@
         <p class="intro-p-1">I'm a software engineer living in Colorado.</p>
         <p class="intro-p-2">
           I'm a co-creator of
-          <a class="ekko" href="https://ekko-realtime.com/">Ekko</a>, a self
-          deployable realtime infrastructure with in-transit message processing.
+          <a class="ekko" href="https://ekko-realtime.com/">Ekko</a>, an
+          open-source realtime service with in-transit message processing.
         </p>
       </section>
 
@@ -128,33 +133,32 @@
               alt="ekko logo"
           /></a>
         </div>
-        <div id="ekko-info-container" class="flexbox">
-          <div>
-            <a href="https://ekko-realtime.com/">
-              <img
-                id="setup-command-gif"
-                src="public/assets/gifs/ekko_infrastructure.gif"
-                alt="A gif showing realtime messages being process by Ekko."
-              />
-            </a>
-          </div>
-          <div class="flexbox horz-center">
-            <p>
-              <a class="ekko" href="https://ekko-realtime.com/#home">Ekko</a>
-              is an open-source framework that allows developers to easily
-              deploy realtime infrastructure for their applications. Custom
-              serverless functions provide a flexible, modular way to process
-              messages as they pass through the realtime system.
-            </p>
-            <a
-              id="ekko-repo-btn"
-              class="btn"
-              target="_blank"
-              href="https://ekko-realtime.com/#case-study"
-              >View Case Study</a
-            >
-          </div>
+        <div>
+          <a href="https://ekko-realtime.com/">
+            <img
+              id="setup-command-gif"
+              src="public/assets/gifs/ekko_infrastructure.gif"
+              alt="A gif showing realtime messages being process by Ekko."
+            />
+          </a>
         </div>
+        <div class="flexbox horz-center">
+          <p>
+            <a class="ekko" href="https://ekko-realtime.com/#home">Ekko</a>
+            is an open-source framework that allows developers to easily deploy
+            realtime infrastructure for their applications. Custom serverless
+            functions provide a flexible, modular way to process messages as
+            they pass through the realtime system.
+          </p>
+          <a
+            id="ekko-repo-btn"
+            class="btn"
+            target="_blank"
+            href="https://ekko-realtime.com/#case-study"
+            >View Case Study</a
+          >
+        </div>
+        <div id="ekko-info-container" class="flexbox"></div>
       </section>
 
       <section id="projects" class="flexbox horz-center">
@@ -187,7 +191,7 @@
               src="public/assets/images/reaction.png"
               alt="Screenshot of Mello application"
             />
-            <h4>Reaction</h4>
+            <h4>Ello</h4>
             <p>
               A Trello-like app built with a React/Redux front-end, and a
               Node.js, Express, MongoDB REST API backend.
@@ -232,7 +236,10 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/dpholbrook" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/drew-holbrook-54070517/"
+              target="_blank"
+            >
               <img
                 class="icon"
                 src="public/assets/icons/linked_in.svg"

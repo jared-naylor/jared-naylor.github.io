@@ -6,7 +6,8 @@
 
 html {
   font-size: 18px;
-  font-family: "Lato", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+  /* font-family: "Lato", "Roboto", "Helvetica Neue", Helvetica, sans-serif; */
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   opacity: 0;
   animation: a 0.5s cubic-bezier(0.64, 0.94, 0.23, 1.11);
   animation-fill-mode: forwards;
+  color: #334252;
 }
 
 .intro-p-1 {
@@ -294,9 +296,6 @@ footer {
   align-items: center;
 }
 
-#ekko-info-container p {
-}
-
 #ekko-title-container,
 #ekko-video-container {
   -ms-align-items: center;
@@ -334,6 +333,8 @@ footer {
   height: auto;
   max-width: 100%;
   width: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .managing-apps {
@@ -452,6 +453,11 @@ div > iframe {
     font-size: 1.1rem;
   }
 
+  #setup-command-gif {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
   #logo {
     margin: 20px;
     width: 55px;
@@ -469,7 +475,8 @@ div > iframe {
   }
 
   #setup-command-gif {
-    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
   }
 
   li {
@@ -536,11 +543,12 @@ div > iframe {
 
 @media (max-width: 690px) {
   #ekko-logo {
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
     width: 75px;
   }
 
   #setup-command-gif {
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -548,10 +556,6 @@ div > iframe {
     -ms-align-items: center;
     align-items: center;
     flex-direction: column;
-  }
-
-  #ekko-logo {
-    margin-right: 0;
   }
 }
 
@@ -561,6 +565,7 @@ div > iframe {
   }
 
   #setup-command-gif {
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -596,6 +601,7 @@ div > iframe {
   }
 
   #setup-command-gif {
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
@@ -618,6 +624,7 @@ div > iframe {
   }
 
   #setup-command-gif {
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
