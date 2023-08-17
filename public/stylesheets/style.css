@@ -15,14 +15,11 @@ body {
 }
 
 #intro,
-#ekko,
 #projects,
 #contact,
 .intro-p-1,
 .intro-p-2,
-#ekko-title-container,
-#ekko-info-container,
-.ekko-manage-container {
+#tinker-info-container {
   opacity: 0;
   animation: a 0.5s cubic-bezier(0.64, 0.94, 0.23, 1.11);
   animation-fill-mode: forwards;
@@ -38,17 +35,12 @@ body {
 }
 
 #contact,
-#projects,
-#ekko-title-container {
+#projects {
   animation-delay: 0.6s;
 }
 
-#ekko-info-container {
+#tinker-info-container {
   animation-delay: 0.8s;
-}
-
-.ekko-manage-container {
-  animation-delay: 1s;
 }
 
 @-webkit-keyframes a {
@@ -165,13 +157,28 @@ p {
   margin-bottom: 15px;
 }
 
-a.ekko {
-  color: #00bdaa;
+a.tinker {
+  color: rgba(79, 70, 229);
+  text-decoration: none;
 }
 
-a {
-  color: #000;
+#closer {
+  font-size: 1rem;
+  line-height: 4rem;
+}
+
+a.tinker:hover {
+  font-weight: bold;
+}
+
+#tinker-highlight {
+  color: white;
   text-decoration: none;
+}
+
+#tinker-highlight :hover {
+  color: rgba(79, 70, 229);
+  font-weight: bold;
 }
 
 li {
@@ -180,7 +187,7 @@ li {
 }
 
 section {
-  padding: 100px 10% 40px;
+  padding: 4% 10%;
 }
 
 hr {
@@ -203,10 +210,10 @@ footer {
 }
 
 .btn {
-  background: #00bdaa;
-  border-color: #00bdaa;
+  background: #9f46e5;
+  border-color: #9f46e5;
   color: #f7f7f7;
-  box-shadow: 0 0 3px #00bdaa;
+  box-shadow: 0 0 3px #9f46e5;
   border-radius: 5px;
   font-weight: 700;
   padding: 10px;
@@ -214,8 +221,7 @@ footer {
 }
 
 .icon {
-  background-color: #334252;
-  border: solid 1px #334252;
+  background-color: #113051;
   border-radius: 100%;
   margin: 2%;
   min-width: 34px;
@@ -225,12 +231,13 @@ footer {
 
 .btn:hover,
 .icon:hover {
-  background-color: #ff895d;
-  border-color: #ff895d;
+  background-color: rgba(79, 70, 229);
+  border-color: rgba(79, 70, 229);
 }
 
-a.ekko:hover {
-  color: #ff895d;
+a.tinker:hover {
+  color: rgba(79, 70, 229);
+  font-weight: bold;
 }
 
 .horz-center {
@@ -281,64 +288,84 @@ a.ekko:hover {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* ---------------------------------
-
-               #ekko
-
------------------------------------- */
-
-#ekko {
-  background-color: #f7f7f7;
+#tinker {
+  background-color: #468de5;
   overflow: hidden;
-  justify-content: center;
   padding-bottom: 0;
-  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.15);
 }
 
-#ekko-info-container {
-  margin-bottom: 50px;
+#tinker-info-container {
+  margin-bottom: 5%;
   align-items: center;
 }
 
-#ekko-title-container,
-#ekko-video-container {
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-}
-
-#ekko-logo {
+#tinker-logo {
   display: inline-block;
-  width: 100%;
-  max-width: 500px;
+  width: 60%;
+  max-width: 250px;
   min-width: 200px;
 }
 
-#ekko h2 {
+#tinker-info-container {
+  display: flex;
+}
+
+#tinker-info-container p {
+  padding-top: 8%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+#tinker h2 {
   display: inline-block;
 }
 
-#ekko-info-container,
-#ekko-video-container {
-  margin-top: 75px;
-}
-
-#ekko-info-container > div,
-#ekko-video-container > div {
+*/ #tinker-info-container > div {
   width: 50%;
 }
 
-#ekko-info-container > div:first-of-type,
-#ekko-video-container > div:first-of-type {
+#tinker-info-container > div:first-of-type {
   margin-right: 2.5%;
 }
 
-#setup-command-gif {
-  height: auto;
-  max-width: 100%;
-  width: auto;
-  margin-top: 5rem;
+#tinker-dashboard-gif {
+  height: 450px;
+  width: 793px;
+  margin-top: 1rem;
   margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+#tinker-deploy-gif {
+  height: auto;
+  width: auto;
+  position: relative;
+  top: -270px;
+  left: -305px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8);
+  opacity: 0.7;
+}
+
+#gif-display-box {
+  text-align: center;
+  height: 500px;
+}
+
+#dashboard-link {
+  margin: 0 auto;
+}
+
+#flex-wrap {
+  display: flex;
+  flex-flow: wrap;
+}
+
+#centered-div {
+  margin: 0 auto;
 }
 
 .managing-apps {
@@ -349,32 +376,26 @@ div > iframe {
   max-width: 100%;
 }
 
-#ekko-info-container > div:last-of-type,
-#ekko-video-container > div:last-of-type {
+#tinker-info-container > div:last-of-type {
   margin-left: 2.5%;
 }
 
-#ekko-video-container div:last-of-type > p {
-  width: 75%;
-}
-
-.ekko-manage-container {
-  max-width: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding-top: 50px;
-  border-top: 1px solid #eee;
-}
-
-.ekko-manage-container a {
-  display: flex;
-  align-items: flex-end;
-}
-
-#ekko-repo-btn {
+#tinker-repo-btn {
+  border-radius: 5px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
   margin-top: 25px;
   width: 228px;
+  background-color: white;
+  text-decoration: none;
+  color: #468de5;
 }
+
+#tinker-repo-btn:hover {
+  color: rgba(79, 70, 229);
+}
+
 #connect-buttons {
   /* display: inline-block; */
   margin-top: 30px;
@@ -421,7 +442,7 @@ div > iframe {
   left: 5px;
 }
 
-#medium-logo {
+#mail-logo {
   cursor: pointer;
   width: 35px;
   position: fixed;
@@ -446,11 +467,9 @@ div > iframe {
   margin: 6%;
 }
 
-/* ---------------------------------
-
-           media queries
-
------------------------------------- */
+#emailad {
+  text-decoration: none;
+}
 
 @media (max-width: 1100px) {
   h4 {
@@ -471,16 +490,20 @@ div > iframe {
     font-size: 0.85rem;
     line-height: 1.5rem;
   }
+
+  #closer {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  #tinker-deploy-gif {
+    left: -250px;
+  }
 }
 
 @media (max-width: 920px) {
   section {
-    padding: 100px 15%;
-  }
-
-  #setup-command-gif {
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    padding: 10% 5%;
   }
 
   li {
@@ -493,45 +516,36 @@ div > iframe {
   }
 
   #projects p {
-    font-size: 1rem;
-    line-height: 1.7rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   #projects > ul {
     -ms-align-items: center;
     align-items: center;
     flex-direction: column;
-    width: 75%;
+    width: auto;
   }
 
-  #logo {
-    width: 50px;
-  }
-
-  #ekko-info-container,
-  #ekko-video-container {
+  #tinker-info-container {
     -ms-align-items: center;
     align-items: center;
     flex-direction: column;
     margin-top: 50px;
   }
 
-  #ekko-info-container > div:first-of-type,
-  #ekko-video-container > div:first-of-type {
+  #tinker-info-container > div:first-of-type {
     margin-right: 0;
   }
 
-  #ekko-info-container > div:last-of-type,
-  #ekko-video-container > div:last-of-type {
+  #tinker-info-container > div:last-of-type {
     margin-left: 0;
   }
 
-  #ekko-info-container > div,
-  #ekko-video-container > div {
+  #tinker-info-container > div {
     width: 90%;
   }
 
-  #deploy-command-gif,
   div > iframe {
     margin-bottom: 50px;
   }
@@ -543,34 +557,66 @@ div > iframe {
   #contact li {
     margin: 8%;
   }
+
+  #tinker-deploy-gif {
+    left: -195px;
+  }
+
+  #closer {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (max-width: 690px) {
-  #ekko-logo {
-    margin-bottom: 1rem;
-    width: 75px;
-  }
-
-  #setup-command-gif {
+  #git-display-box {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
-  #ekko-title-container {
+  #tinker-info-container {
     -ms-align-items: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  #gif-display-box {
+    text-align: center;
+    height: 400px;
+  }
+
+  #tinker-dashboard-gif {
+    height: 350px;
+    width: 550px;
+  }
+
+  #tinker-deploy-gif {
+    position: absolute;
+    height: 125px;
+    top: 200px;
+    left: 0px;
+  }
+
+  #contact li {
+    margin: 15%;
+  }
+
+  #projects > ul {
+    width: 100%;
+  }
+
+  #closer {
+    line-height: 1.5rem;
+  }
+
+  ul.flexbox.vert-center li {
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 570px) {
   #intro > p {
     width: 100%;
-  }
-
-  #setup-command-gif {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
   }
 
   h1 {
@@ -583,34 +629,30 @@ div > iframe {
   }
 
   section {
-    padding: 65px 15%;
+    padding: 10% 15%;
   }
 
-  #ekko-info-container {
+  #tinker-info-container {
     margin-top: 25px;
-  }
-
-  #ekko-repo-btn {
-    align-self: center;
   }
 
   #projects > ul {
     width: 100%;
   }
-}
 
-@media (max-width: 465px) {
-  #ekko-info-container > div {
-    width: 100%;
+  #gif-display-box {
+    text-align: center;
+    height: 470px;
   }
 
-  #setup-command-gif {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  #tinker-dashboard-gif {
+    height: 275px;
+    width: 440px;
   }
 
-  #ekko-logo {
-    width: 60px;
+  #tinker-deploy-gif {
+    position: inherit;
+    height: 100px;
   }
 
   #contact li {
@@ -620,6 +662,43 @@ div > iframe {
   #projects > ul {
     width: 100%;
   }
+
+  #closer {
+    line-height: 1.5rem;
+  }
+
+  ul.flexbox.vert-center li {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 465px) {
+  #gif-display-box {
+    text-align: center;
+    height: 350px;
+  }
+
+  #tinker-dashboard-gif {
+    height: 200px;
+    width: 300px;
+  }
+
+  #tinker-deploy-gif {
+    position: inherit;
+    height: 100px;
+  }
+
+  #contact li {
+    margin: 15%;
+  }
+
+  #projects > ul {
+    width: 100%;
+  }
+
+  #closer {
+    line-height: 1.5rem;
+  }
 }
 
 @media (max-width: 400px) {
@@ -627,9 +706,19 @@ div > iframe {
     font-size: 16px;
   }
 
-  #setup-command-gif {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  #gif-display-box {
+    text-align: center;
+    height: 350px;
+  }
+
+  #tinker-dashboard-gif {
+    height: 200px;
+    width: 300px;
+  }
+
+  #tinker-deploy-gif {
+    position: inherit;
+    height: 100px;
   }
 
   h1 {
@@ -644,19 +733,19 @@ div > iframe {
     font-size: 1.2rem;
   }
 
-  #ekko-repo-btn {
-    width: 180px;
-  }
-
   #projects > ul {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   #projects li {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   #projects li:last-of-type {
     margin-bottom: 0;
+  }
+
+  #closer {
+    line-height: 1.5rem;
   }
 }
